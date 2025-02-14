@@ -1,101 +1,306 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - MathTrick</title>
+    <title>Privacy Policy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f9f9f9;
             color: #333;
-        }
-        h1, h2 {
-            color: #222;
-        }
-        h1 {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Используем min-height, чтобы страница могла расширяться */
         }
         .container {
             max-width: 800px;
-            margin: auto;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            margin: 20px; /* Чтобы на маленьких экранах текст не прилипал к границе */
+            text-align: center;
         }
-        p {
-            line-height: 1.6;
+        select {
+            margin-bottom: 20px;
+            padding: 5px;
+            font-size: 16px;
         }
-        a {
-            color: #007BFF;
-            text-decoration: none;
+        .language {
+            display: none;
+            text-align: left; /* Чтобы тексты выглядели привычнее */
         }
-        a:hover {
-            text-decoration: underline;
+        .language.active {
+            display: block;
+        }
+        h1, h2, h3 {
+            text-align: center; /* Заголовки по центру */
         }
     </style>
+    <script>
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById('languageSelect').value;
+            const sections = document.querySelectorAll('.language');
+
+            sections.forEach(section => {
+                section.classList.remove('active');
+                if (section.id === selectedLanguage) {
+                    section.classList.add('active');
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 <div class="container">
-    <h1>Politique de Confidentialité – MathTrick</h1>
-    <p><strong>Dernière mise à jour :</strong> 13 février 2025</p>
+    <h1>Privacy Policy</h1>
+    <label for="languageSelect">Choose Language:</label>
+    <select id="languageSelect" onchange="changeLanguage()">
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="ru">Русский</option>
+        <option value="ka">ქართული</option>
+        <option value="fr">Français</option>
+    </select>
 
-    <h2>1. Introduction</h2>
-    <p>Bienvenue sur <strong>MathTrick</strong>, une application mobile éducative conçue pour aider les utilisateurs à améliorer leurs compétences en calcul mental. Votre confidentialité est notre priorité. Cette politique explique comment nous collectons, utilisons et protégeons vos données.</p>
+    <!-- English -->
+    <div id="en" class="language active">
+        <h2>Privacy Policy (English)</h2>
+        <p><strong>Last Updated:</strong> February 13, 2025</p>
+        <h3>1. Introduction</h3>
+        <p>Welcome to <strong>MathTick</strong>, an educational mobile application designed to help users improve their mental math skills. Your privacy is our priority. This policy explains how we collect, use, and protect your data.</p>
+        <h3>2. Data Collection</h3>
+        <ul>
+            <li><strong>Offline functionality:</strong> MathTick operates offline and does not require registration.</li>
+            <li><strong>Minimal data:</strong> If anonymous data is collected, it is solely for improving app features.</li>
+        </ul>
+        <h3>3. Data Usage</h3>
+        <p>Collected data (if applicable) is used to:</p>
+        <ul>
+            <li>Enhance app functionality.</li>
+            <li>Analyze overall performance (e.g., via Firebase Analytics).</li>
+        </ul>
+        <h3>4. Data Sharing</h3>
+        <p>We <strong>do not share user data with third parties</strong>, except in the following cases:</p>
+        <ul>
+            <li><strong>Legal compliance:</strong> If required by law or to respond to legal processes.</li>
+            <li><strong>Service providers:</strong> If we use third-party services (e.g., Firebase Analytics), the data remains anonymous and secure.</li>
+        </ul>
+        <h3>5. Children’s Data</h3>
+        <ul>
+            <li>We comply with the requirements of COPPA (Children's Online Privacy Protection Act) and equivalent regulations.</li>
+            <li>No personal data from children under 13 is intentionally collected.</li>
+            <li>Parents can contact us to request data deletion.</li>
+        </ul>
+        <h3>6. Security Measures</h3>
+        <p>We implement security measures to protect collected data, such as:</p>
+        <ul>
+            <li>Data encryption (if applicable).</li>
+            <li>Limited access to anonymous data.</li>
+            <li>Regular updates to protect against emerging threats.</li>
+        </ul>
+        <h3>7. Data Retention and Deletion</h3>
+        <p>Anonymous data, if collected, is stored for a limited time. You can request deletion of any collected data by contacting us directly.</p>
+        <h3>8. Privacy Policy Changes</h3>
+        <p>We may update this policy to reflect changes in the app or new legal requirements. Updates will be published with a visible date.</p>
+        <h3>9. Contact</h3>
+        <p>If you have any questions or requests regarding this privacy policy, contact us:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:nemesisgalaxie@proton.me">nemesisgalaxie@proton.me</a></li>
+        </ul>
+    </div>
 
-    <h2>2. Collecte des données</h2>
-    <p>Nous <strong>ne collectons aucune donnée personnelle identifiable</strong>.</p>
-    <ul>
-        <li><strong>Fonctionnalité hors ligne :</strong> MathTrick fonctionne hors ligne et ne nécessite pas d'inscription.</li>
-        <li><strong>Données minimales :</strong> Si des données anonymes sont collectées, elles concernent uniquement l'utilisation de l'application pour améliorer les fonctionnalités.</li>
-    </ul>
+    <!-- Español -->
+    <div id="es" class="language">
+        <h2>Política de Privacidad (Español)</h2>
+        <p><strong>Última Actualización:</strong> 13 de febrero de 2025</p>
+        <h3>1. Introducción</h3>
+        <p>Bienvenido a <strong>MathTick</strong>, una aplicación móvil educativa diseñada para ayudar a los usuarios a mejorar sus habilidades de cálculo mental. Su privacidad es nuestra prioridad. Esta política explica cómo recopilamos, usamos y protegemos sus datos.</p>
+        <h3>2. Recolección de Datos</h3>
+        <ul>
+            <li><strong>Función sin conexión:</strong> MathTick funciona sin conexión y no requiere registro.</li>
+            <li><strong>Datos mínimos:</strong> Si se recopilan datos anónimos, es únicamente para mejorar las funciones de la aplicación.</li>
+        </ul>
+        <h3>3. Uso de Datos</h3>
+        <p>Los datos recopilados (si aplica) se usan para:</p>
+        <ul>
+            <li>Mejorar las funciones de la aplicación.</li>
+            <li>Analizar el rendimiento general (por ejemplo, a través de Firebase Analytics).</li>
+        </ul>
+        <h3>4. Compartir Datos</h3>
+        <p><strong>No compartimos datos de usuarios con terceros</strong>, excepto en los siguientes casos:</p>
+        <ul>
+            <li><strong>Cumplimiento legal:</strong> Si lo exige la ley o para responder a procesos legales.</li>
+            <li><strong>Proveedores de servicios:</strong> Si usamos servicios de terceros (por ejemplo, Firebase Analytics), los datos permanecen anónimos y seguros.</li>
+        </ul>
+        <h3>5. Datos de Niños</h3>
+        <ul>
+            <li>Cumplimos con los requisitos de la COPPA (Children's Online Privacy Protection Act) y con las regulaciones equivalentes.</li>
+            <li>No se recopilan intencionadamente datos personales de niños menores de 13 años.</li>
+            <li>Los padres pueden contactarnos para solicitar la eliminación de datos.</li>
+        </ul>
+        <h3>6. Medidas de Seguridad</h3>
+        <p>Implementamos medidas de seguridad para proteger los datos recopilados, como:</p>
+        <ul>
+            <li>Cifrado de datos (si aplica).</li>
+            <li>Acceso limitado a datos anónimos.</li>
+            <li>Actualizaciones regulares para proteger contra amenazas emergentes.</li>
+        </ul>
+        <h3>7. Retención y Eliminación de Datos</h3>
+        <p>Los datos anónimos, si se recopilan, se almacenan por un tiempo limitado. Puede solicitar la eliminación de cualquier dato recopilado contactándonos directamente.</p>
+        <h3>8. Cambios en la Política de Privacidad</h3>
+        <p>Podemos actualizar esta política para reflejar cambios en la aplicación o nuevos requisitos legales. Las actualizaciones se publicarán con una fecha visible.</p>
+        <h3>9. Contacto</h3>
+        <p>Si tiene preguntas o solicitudes sobre esta política de privacidad, contáctenos:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:nemesisgalaxie@proton.me">nemesisgalaxie@proton.me</a></li>
+        </ul>
+    </div>
 
-    <h2>3. Utilisation des données</h2>
-    <p>Les données collectées (si applicables) sont utilisées pour :</p>
-    <ul>
-        <li>Améliorer les fonctionnalités de l'application.</li>
-        <li>Analyser les performances globales (par exemple, via Firebase Analytics).</li>
-    </ul>
-    <p>Nous ne recueillons ni n’utilisons d’informations sensibles ou personnelles sans votre consentement explicite.</p>
+    <!-- Русский -->
+    <div id="ru" class="language">
+        <h2>Политика Конфиденциальности (Русский)</h2>
+        <p><strong>Последнее обновление:</strong> 13 февраля 2025</p>
+        <h3>1. Введение</h3>
+        <p>Добро пожаловать в <strong>MathTick</strong>, образовательное мобильное приложение, разработанное для улучшения навыков устного счета. Ваша конфиденциальность — наш приоритет. Эта политика объясняет, как мы собираем, используем и защищаем ваши данные.</p>
+        <h3>2. Сбор данных</h3>
+        <ul>
+            <li><strong>Оффлайн-функциональность:</strong> MathTick работает оффлайн и не требует регистрации.</li>
+            <li><strong>Минимальные данные:</strong> Если собираются анонимные данные, это делается исключительно для улучшения функций приложения.</li>
+        </ul>
+        <h3>3. Использование данных</h3>
+        <p>Собранные данные (если применимо) используются для:</p>
+        <ul>
+            <li>Улучшения функциональности приложения.</li>
+            <li>Анализа общей производительности (например, через Firebase Analytics).</li>
+        </ul>
+        <h3>4. Передача данных</h3>
+        <p><strong>Мы не передаем пользовательские данные третьим лицам</strong>, за исключением следующих случаев:</p>
+        <ul>
+            <li><strong>Соблюдение закона:</strong> Если это требуется законом или для ответа на юридические запросы.</li>
+            <li><strong>Поставщики услуг:</strong> Если мы используем сторонние сервисы (например, Firebase Analytics), данные остаются анонимными и защищенными.</li>
+        </ul>
+        <h3>5. Данные детей</h3>
+        <ul>
+            <li>Мы соблюдаем требования COPPA (Children's Online Privacy Protection Act) и аналогичные регулирующие нормы.</li>
+            <li>Мы намеренно не собираем личные данные детей младше 13 лет.</li>
+            <li>Родители могут связаться с нами, чтобы запросить удаление данных.</li>
+        </ul>
+        <h3>6. Меры безопасности</h3>
+        <p>Мы реализуем меры безопасности для защиты собранных данных, такие как:</p>
+        <ul>
+            <li>Шифрование данных (если применимо).</li>
+            <li>Ограниченный доступ к анонимным данным.</li>
+            <li>Регулярные обновления для защиты от новых угроз.</li>
+        </ul>
+        <h3>7. Хранение и удаление данных</h3>
+        <p>Анонимные данные, если они собираются, хранятся в течение ограниченного времени. Вы можете запросить удаление любых собранных данных, связавшись с нами напрямую.</p>
+        <h3>8. Изменения в политике конфиденциальности</h3>
+        <p>Мы можем обновлять эту политику, чтобы отражать изменения в приложении или новые законодательные требования. Обновления будут опубликованы с видимой датой.</p>
+        <h3>9. Контакты</h3>
+        <p>Если у вас есть вопросы или запросы относительно этой политики конфиденциальности, свяжитесь с нами:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:nemesisgalaxie@proton.me">nemesisgalaxie@proton.me</a></li>
+        </ul>
+    </div>
 
-    <h2>4. Partage des données</h2>
-    <p>Nous <strong>ne partageons aucune donnée utilisateur avec des tiers</strong>, sauf dans les cas suivants :</p>
-    <ul>
-        <li><strong>Conformité légale :</strong> Si requis par la loi ou pour répondre à une procédure judiciaire.</li>
-        <li><strong>Fournisseurs de services :</strong> Dans le cas où nous utilisons des services tiers (comme Firebase Analytics), ces données restent anonymes et sécurisées.</li>
-    </ul>
-    <p>Aucune donnée sensible des utilisateurs, en particulier des enfants, n'est partagée ou utilisée à des fins commerciales.</p>
+    <!-- ქართული -->
+    <div id="ka" class="language">
+        <h2>კონფიდენციალურობის პოლიტიკა (ქართული)</h2>
+        <p><strong>ბოლო განახლება:</strong> 2025 წლის 13 თებერვალი</p>
+        <h3>1. შესავალი</h3>
+        <p>კეთილი იყოს თქვენი მობრძანება <strong>MathTick</strong>-ში, საგანმანათლებლო მობილურ აპლიკაციაში, რომელიც შექმნილია მომხმარებლების გონებრივი მათემატიკური უნარების გასაუმჯობესებლად. თქვენი კონფიდენციალურობა ჩვენი პრიორიტეტია. ეს პოლიტიკა განმარტავს, როგორ ვაგროვებთ, ვიყენებთ და ვიცავთ თქვენს მონაცემებს.</p>
+        <h3>2. მონაცემების შეგროვება</h3>
+        <ul>
+            <li><strong>ოფლაინ ფუნქციონალი:</strong> MathTick მუშაობს ოფლაინ და არ საჭიროებს რეგისტრაციას.</li>
+            <li><strong>მინიმალური მონაცემები:</strong> თუ გროვდება ანონიმური მონაცემები, ეს კეთდება მხოლოდ აპლიკაციის ფუნქციების გაუმჯობესებისთვის.</li>
+        </ul>
+        <h3>3. მონაცემების გამოყენება</h3>
+        <p>შეგროვებული მონაცემები (თუ არსებობს) გამოიყენება:</p>
+        <ul>
+            <li>აპლიკაციის ფუნქციების გაუმჯობესებისთვის.</li>
+            <li>საერთო მუშაობის ანალიზისთვის (მაგ., Firebase Analytics-ის გამოყენებით).</li>
+        </ul>
+        <h3>4. მონაცემების გაზიარება</h3>
+        <p><strong>ჩვენ არ ვიზიარებთ მომხმარებელთა მონაცემებს მესამე პირებთან</strong>, გარდა შემდეგი შემთხვევებისა:</p>
+        <ul>
+            <li><strong>კანონის დაცვა:</strong> თუ ეს მოითხოვება კანონით ან იურიდიულ პროცესზე პასუხისთვის.</li>
+            <li><strong>სერვისის პროვაიდერები:</strong> თუ ვიყენებთ მესამე მხარის სერვისებს (მაგ., Firebase Analytics), მონაცემები რჩება ანონიმური და დაცული.</li>
+        </ul>
+        <h3>5. ბავშვების მონაცემები</h3>
+        <ul>
+            <li>ჩვენ ვიცავთ COPPA-ს (Children's Online Privacy Protection Act) მოთხოვნებს და ანალოგიურ რეგულაციებს.</li>
+            <li>13 წლამდე ბავშვების პირადი მონაცემები მიზანმიმართულად არ გროვდება.</li>
+            <li>მშობლებს შეუძლიათ დაგვიკავშირდნენ მონაცემების წაშლის მოთხოვნით.</li>
+        </ul>
+        <h3>6. უსაფრთხოების ზომები</h3>
+        <p>ჩვენ ვიყენებთ უსაფრთხოების ზომებს მონაცემების დასაცავად, როგორიცაა:</p>
+        <ul>
+            <li>მონაცემების დაშიფვრა (თუ შესაძლებელია).</li>
+            <li>ანონიმური მონაცემებზე შეზღუდული წვდომა.</li>
+            <li>მიმდინარე საფრთხეებისგან დაცვის რეგულარული განახლებები.</li>
+        </ul>
+        <h3>7. მონაცემების შენახვა და წაშლა</h3>
+        <p>ანონიმური მონაცემები, თუ ისინი გროვდება, ინახება შეზღუდული დროით. თქვენ შეგიძლიათ მოითხოვოთ ნებისმიერი შეგროვებული მონაცემის წაშლა პირდაპირი კონტაქტის გზით.</p>
+        <h3>8. კონფიდენციალურობის პოლიტიკის ცვლილებები</h3>
+        <p>ჩვენ შეგვიძლია განვაახლოთ ეს პოლიტიკა აპლიკაციაში ცვლილებების ან ახალი საკანონმდებლო მოთხოვნების შესაბამისად. განახლებები გამოქვეყნდება ხილვადი თარიღით.</p>
+        <h3>9. კონტაქტი</h3>
+        <p>თუ გაქვთ კითხვები ან მოთხოვნები ამ კონფიდენციალურობის პოლიტიკის შესახებ, დაგვიკავშირდით:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:nemesisgalaxie@proton.me">nemesisgalaxie@proton.me</a></li>
+        </ul>
+    </div>
 
-    <h2>5. Données des enfants</h2>
-    <p>Si votre application est utilisée par des enfants de moins de 13 ans :</p>
-    <ul>
-        <li>Aucune donnée personnelle identifiable n'est collectée intentionnellement.</li>
-        <li>Nous respectons les exigences de la <strong>COPPA</strong> (Children's Online Privacy Protection Act) et des réglementations équivalentes.</li>
-        <li>Les parents peuvent nous contacter à tout moment pour demander la suppression des données associées à leur enfant.</li>
-    </ul>
-
-    <h2>6. Mesures de sécurité</h2>
-    <p>Nous mettons en œuvre des mesures de sécurité pour protéger toutes les données collectées, notamment :</p>
-    <ul>
-        <li>Chiffrement des données (si applicable).</li>
-        <li>Accès limité aux données anonymes.</li>
-        <li>Mise à jour régulière des mesures de sécurité pour protéger contre les menaces émergentes.</li>
-    </ul>
-
-    <h2>7. Conservation et suppression des données</h2>
-    <p>Les données anonymes collectées, si elles existent, sont stockées pour une durée limitée afin d'améliorer l'application. Vous pouvez demander la suppression de toutes les données collectées (si applicable) en nous contactant directement.</p>
-
-    <h2>8. Modifications de la politique de confidentialité</h2>
-    <p>Nous pouvons mettre à jour cette politique de confidentialité pour refléter les modifications apportées à l'application ou pour répondre à de nouvelles exigences légales. Tout changement sera publié avec une date de mise à jour visible.</p>
-
-    <h2>9. Contact</h2>
-    <p>Pour toute question ou demande concernant cette politique de confidentialité, vous pouvez nous contacter :</p>
-    <ul>
-        <li><strong>Email :</strong> <a href="mailto:nemesisgalaxie@proton.me">nemesisgalaxie@proton.me</a></li>
-    </ul>
+    <!-- Français -->
+    <div id="fr" class="language">
+        <h2>Politique de Confidentialité (Français)</h2>
+        <p><strong>Dernière mise à jour :</strong> 13 février 2025</p>
+        <h3>1. Introduction</h3>
+        <p>Bienvenue sur <strong>MathTick</strong>, une application mobile éducative conçue pour aider les utilisateurs à améliorer leurs compétences en calcul mental. Votre confidentialité est notre priorité. Cette politique explique comment nous collectons, utilisons et protégeons vos données.</p>
+        <h3>2. Collecte des données</h3>
+        <ul>
+            <li><strong>Fonctionnalité hors ligne :</strong> MathTick fonctionne hors ligne et ne nécessite pas d'inscription.</li>
+            <li><strong>Données minimales :</strong> Si des données anonymes sont collectées, elles concernent uniquement l'utilisation de l'application pour améliorer les fonctionnalités.</li>
+        </ul>
+        <h3>3. Utilisation des données</h3>
+        <p>Les données collectées (si applicables) sont utilisées pour :</p>
+        <ul>
+            <li>Améliorer les fonctionnalités de l'application.</li>
+            <li>Analyser les performances globales (par exemple, via Firebase Analytics).</li>
+        </ul>
+        <h3>4. Partage des données</h3>
+        <p>Nous <strong>ne partageons aucune donnée utilisateur avec des tiers</strong>, sauf dans les cas suivants :</p>
+        <ul>
+            <li><strong>Conformité légale :</strong> Si requis par la loi ou pour répondre à une procédure judiciaire.</li>
+            <li><strong>Fournisseurs de services :</strong> Dans le cas où nous utilisons des services tiers (comme Firebase Analytics), ces données restent anonymes et sécurisées.</li>
+        </ul>
+        <h3>5. Données des enfants</h3>
+        <ul>
+            <li>Nous respectons les exigences de la COPPA (Children's Online Privacy Protection Act) et des réglementations équivalentes.</li>
+            <li>Aucune donnée personnelle identifiable n'est collectée intentionnellement.</li>
+            <li>Les parents peuvent nous contacter à tout moment pour demander la suppression des données associées à leur enfant.</li>
+        </ul>
+        <h3>6. Mesures de sécurité</h3>
+        <p>Nous mettons en œuvre des mesures de sécurité pour protéger toutes les données collectées, notamment :</p>
+        <ul>
+            <li>Chiffrement des données (si applicable).</li>
+            <li>Accès limité aux données anonymes.</li>
+            <li>Mise à jour régulière des mesures de sécurité pour protéger contre les menaces émergentes.</li>
+        </ul>
+        <h3>7. Conservation et suppression des données</h3>
+        <p>Les données anonymes collectées, si elles existent, sont stockées pour une durée limitée afin d'améliorer l'application. Vous pouvez demander la suppression de toutes les données collectées (si applicable) en nous contactant directement.</p>
+        <h3>8. Modifications de la politique de confidentialité</h3>
+        <p>Nous pouvons mettre à jour cette politique de confidentialité pour refléter les modifications apportées à l'application ou pour répondre à de nouvelles exigences légales. Tout changement sera publié avec une date de mise à jour visible.</p>
+        <h3>9. Contact</h3>
+        <p>Pour toute question ou demande concernant cette politique de confidentialité, vous pouvez nous contacter :</p>
+        <ul>
+            <li><strong>Email :</strong> <a href="mailto:nemesisgalaxie@proton.me">nemesisgalaxie@proton.me</a></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
